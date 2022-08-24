@@ -95,29 +95,38 @@ class NavBar extends LitElement {
             width: 100%;
             background-color: rgb(255, 255, 255);
         }
+        h3 {
+            color: #fff;
+        }
         
     `
 
-    static properties = {
-        active: {}
+    static get properties() {
+        return {
+            navPages: {},
+            urlSelected: {},
+        }
     }
 
     constructor() {
         super();
         this.navPages = [
-            { text: 'PERSONAS', active: true, url: '#'},
-            { text: 'AUTÓNOMOS Y EMPRESAS', active: false, url: '#'}
+            { text: 'PERSONAS', active: true, url: '#', selected: 'personas'},
+            { text: 'AUTÓNOMOS Y EMPRESAS', active: false, url: '#', selected: 'empresas'}
         ]
     }
 
     activeButton(event) {
-        const inputText = event.target.innerText
+        const input = event.target
+        console.log(this.urlSelected);
+        this.navPages.forEach( item => input.innerText === item.text ? item.active = true : item.active = false )
+        this.goUrl(input.attributes['data-select'].value)
+    }
 
-        this.navPages.forEach( item =>  {
-            inputText === item.text ? item.active = true : item.active = false 
-        })
-
-        this.requestUpdate()
+    goUrl(url) {
+        this.dispatchEvent(new CustomEvent('change', {
+            detail: url
+        }));
     }
 
     render() {
@@ -133,6 +142,7 @@ class NavBar extends LitElement {
                                     href=${item.url} 
                                     class='navbar-item ${item.active ? 'active' : ''}'
                                     @click=${this.activeButton}
+                                    data-select=${item.selected}
                                 > ${item.text}</a>
                             `
                         })}
