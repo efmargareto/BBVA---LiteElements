@@ -35,17 +35,15 @@ export class HomeApp extends LitElement {
     render() {
         return html `
             <div id="home">
-
                 <nav-bar urlSelected=${this.urlSelected} @change=${this.urlChanged}></nav-bar>
-
-                <h1>testing mode</h1>
-              
                 ${this.urlSelected === 'personas'
                     ? html `
                         <h3>Hola desde personas</h3>
+                        <text-image></text-image>
                     `
                     :  html `
                         <h3>Hola desde otro sitio</h3>
+                        <h3>Hola mundo</h3>
                     `
                 }
             </div>
