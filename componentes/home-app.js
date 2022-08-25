@@ -38,7 +38,6 @@ export class HomeApp extends LitElement {
                 <nav-bar urlSelected=${this.urlSelected} @change=${this.urlChanged}></nav-bar>
                 ${this.urlSelected === 'personas'
                     ? html `
-                        <h3>Hola desde personas</h3>
                         <text-image></text-image>
                     `
                     :  html `

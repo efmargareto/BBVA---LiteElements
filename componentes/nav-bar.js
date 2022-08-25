@@ -50,7 +50,7 @@ class NavBar extends LitElement {
 
         .logo {
             height: 40px;
-            margin: 0 15px;
+            margin-right: 15px;
         }
 
         a {
