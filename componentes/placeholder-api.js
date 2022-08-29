@@ -43,16 +43,6 @@ export class PlaceHOlderApi extends LitElement {
         }
     )}
     
-
-    // FormData cuando sea necesario
-
-        // albumId: 3
-        // id: 101
-        // thumbnailUrl: "https://via.placeholder.com/150/e743b"
-        // title: "incidunt alias vel enim"
-        // url: "https://via.placeholder.com/600/e743b"
-
-
     render() {
         return html`
             <h1>Hola desde placeholder api</h1>
