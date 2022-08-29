@@ -135,7 +135,6 @@ class NavBar extends LitElement {
                 <div class="navbar">
                     <div class="navbar-block">
                         <img @click=${this.activeButton} src="./images/logo-BBVA.svg" alt="logo" class='logo'>
-
                         ${this.navPages.map( item => {
                             return html`
                                 <a 
@@ -146,7 +145,6 @@ class NavBar extends LitElement {
                                 > ${item.text}</a>
                             `
                         })}
-   
                     </div>
                     <div class="navbar-block">
                         <a href="#" class='navbar-item navbar-item__newClient'>

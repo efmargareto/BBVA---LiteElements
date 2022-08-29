@@ -1,4 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
+import './get-api' 
+import './placeholder-api'
+
 
 export class HomeApp extends LitElement {
 
@@ -35,14 +38,29 @@ export class HomeApp extends LitElement {
     render() {
         return html `
             <div id="home">
+
                 <nav-bar urlSelected=${this.urlSelected} @change=${this.urlChanged}></nav-bar>
                 ${this.urlSelected === 'personas'
                     ? html `
-                        <text-image></text-image>
+                        <text-image 
+                            subtitle='Cuenta Online Sin Comisiones'
+                            title='La cuenta sin comisiones y sin condiciones'
+                            features='La cuenta que no te pide nada. Ni nómina, ni recibos. NADA. - Y ahora, con el Plan Invita a un Amigo, podrás ganar hasta 350 € por traer a tus amigos a BBVA y ellos se podrán llevar 15 € cada uno.'
+                            image='hero-desktop'
+                            btnText='Hazte cliente'
+                        ></text-image>
+                        <placeholder-api></placeholder-api>
                     `
                     :  html `
-                        <h3>Hola desde otro sitio</h3>
-                        <h3>Hola mundo</h3>
+                    <text-image 
+                        subtitle='Cuentas para autónomos y empresas'
+                        title='Nuevo banco, cero comisiones en servicios habituales'
+                        text='Seas autónomo, pyme o empresa estrenar banco tiene muchas ventajas.'
+                        image='hero-desktop-blue'
+                        class='blue'
+                        secondaryText='Cero comisiones durante los 12 primeros meses para autónomos y empresas. Y si tu empresa factura menos de 5 millones de €, tampoco pagarás comisiones después.'
+                        btnText='Saber más'
+                    ></text-image>
                     `
                 }
             </div>
