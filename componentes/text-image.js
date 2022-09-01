@@ -22,6 +22,19 @@ export class TextImage extends LitElement {
             color: #121212;
         }
 
+        .small-img .textImage-img {
+            max-height: 410px;
+            height: 100%;
+            min-width: 45%;
+            width: auto;
+            background-position-y: 0 !important;
+            background-size: contain !important;
+        }
+
+        .small-img .textImage-block {
+            align-items: center
+        }
+
         .container {
             width: 1176px;
             margin-left: auto;
@@ -57,7 +70,7 @@ export class TextImage extends LitElement {
             padding-bottom: 80px;
         }
         
-        .textImage-img {
+        .textImage-img  {
             width: 50%;
             min-width: 50%;
             max-width: 50vw;
@@ -155,7 +168,7 @@ export class TextImage extends LitElement {
                             </div>
                             <p class='bold'>${this.secondaryText}</p>
                         </div>
-                        <div class="textImage-img" style="background: url('./images/${this.image}.jpg')"></div>
+                        <div class="textImage-img" style="background: url('./images/${this.image}')"></div>
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@ export class PlaceHOlderApi extends LitElement {
             margin-left: auto;
             margin-right: auto;
             max-width: 100%;
+            margin-bottom: 40px;
         }
 
         .album {
