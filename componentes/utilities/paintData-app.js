@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import './get-api';
+import './getApi-app';
 
 export class PlaceHOlderApi extends LitElement {
 

@@ -9,10 +9,6 @@ export class GetApi extends LitElement {
         };
     }
 
-    // Revisar ciclo de vida de los componentes en Lit 
-    // firstUpdated : Equivale al hook, useEfect, en la primera carga
-    // Cuando nuestro componentes este montado y todas las propiedades cargadas se ejecuta
-
     firstUpdated() {
         this.getData()
     }
@@ -20,8 +16,6 @@ export class GetApi extends LitElement {
     constructor() {
         super();
     }
-
-    // Bubbles y Composed se utilizan para que el evento pueda subir de hijos a padres
 
     sendResponse(data) {
         this.dispatchEvent(new CustomEvent('ApiData', {

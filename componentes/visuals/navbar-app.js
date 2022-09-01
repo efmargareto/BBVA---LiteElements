@@ -1,6 +1,5 @@
 import { LitElement, html, css } from "lit";
 
-
 class NavBar extends LitElement {
 
     static styles = css`
@@ -103,7 +102,6 @@ class NavBar extends LitElement {
         .not-allowed {
             cursor: not-allowed;
         }
-        
     `
 
     static get properties() {
@@ -123,7 +121,6 @@ class NavBar extends LitElement {
 
     activeButton(event) {
         const input = event.target
-        console.log(this.urlSelected);
         this.navPages.forEach( item => input.innerText === item.text ? item.active = true : item.active = false )
         this.goUrl(input.attributes['data-select'].value)
     }
@@ -134,22 +131,26 @@ class NavBar extends LitElement {
         }));
     }
 
+    paintTabs() {
+        return this.navPages.map( item => {
+            return html`
+                <a 
+                    href=${item.url} 
+                    class='navbar-item ${item.active ? 'active' : ''}'
+                    @click=${this.activeButton}
+                    data-select=${item.selected}
+                > ${item.text}</a>
+            `
+        })
+    }
+
     render() {
         return html `
             <div class="container">
                 <div class="navbar">
                     <div class="navbar-block">
                         <img src="./images/logo-BBVA.svg" alt="logo" class='logo'>
-                        ${this.navPages.map( item => {
-                            return html`
-                                <a 
-                                    href=${item.url} 
-                                    class='navbar-item ${item.active ? 'active' : ''}'
-                                    @click=${this.activeButton}
-                                    data-select=${item.selected}
-                                > ${item.text}</a>
-                            `
-                        })}
+                        ${this.paintTabs()}
                     </div>
                     <div class="navbar-block">
                         <a href="#" class='navbar-item navbar-item__newClient not-allowed'>
@@ -163,7 +164,6 @@ class NavBar extends LitElement {
             </div>
         `;
     }
-
 }
 
 customElements.define('nav-bar', NavBar);

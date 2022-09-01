@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import './btn-primary'
+import './btn-app'
 
 export class TextButton extends LitElement {
 

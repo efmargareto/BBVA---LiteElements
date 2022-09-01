@@ -5,7 +5,6 @@ export class LoginApp extends LitElement {
     static styles = css`
         :host {
             display: block;
-
         }
 
         * {
@@ -89,8 +88,6 @@ export class LoginApp extends LitElement {
         button:hover {
             background-position: 0 center;
         }
-
-
     `
     $get = elem => this.shadowRoot.querySelector(elem)
 

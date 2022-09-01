@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit-element';
-import './get-api' 
-import './placeholder-api'
-import './login-app'
-import './text-button'
+import './utilities/getApi-app' 
+import './utilities/paintData-app'
+import './utilities/login-app'
+import './visuals/infolink-app'
 
 export class HomeApp extends LitElement {
 
@@ -10,12 +10,14 @@ export class HomeApp extends LitElement {
         :host {
             display: block;
         }
+        
         .container {
             width: 1176px;
             margin-left: auto;
             margin-right: auto;
             max-width: 100%;
         }
+        
         h3, h1 {
             color: red;
         }

@@ -1,6 +1,6 @@
 import './componentes/home-app' 
-import './componentes/nav-bar' 
-import './componentes/text-image' 
-import './componentes/btn-primary' 
-import './componentes/footer-app' 
+import './componentes/visuals/navbar-app' 
+import './componentes/visuals/features-app' 
+import './componentes/visuals/btn-app' 
+import './componentes/visuals/footer-app' 
 
