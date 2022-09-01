@@ -38,6 +38,9 @@ export class BtnPrimary extends LitElement {
             background-image: linear-gradient(100deg,#1464a5 50%,#1973b8 50%);
         }
 
+        .not-allowed {
+            cursor: not-allowed;
+        }
     `;
 
     static get properties() {

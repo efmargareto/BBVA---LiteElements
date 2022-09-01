@@ -117,6 +117,10 @@ export class TextImage extends LitElement {
             top: 6px;
         }
 
+        .not-allowed {
+            cursor: not-allowed;
+        }
+
         .bold {
             font-weight: 700;
         }
@@ -160,11 +164,11 @@ export class TextImage extends LitElement {
                                 <h1>${this.title}</h1>
                                 <ul>${this.paintFeatures()}</ul>
                                 <p>${this.text}</p>
-                                <a class='links' href="#">Consulta condiciones</a>
+                                <a class='links not-allowed' href="#">Consulta condiciones</a>
                             </div>
                             <div class="textImage-links">
-                                <btn-primary class='${this.class}' text=${this.btnText} url='www.prueba.com'></btn-primary>
-                                <a class='links' href="#" class="links">Más informacion</a>
+                                <btn-primary class='${this.class} not-allowed' text=${this.btnText} url='www.prueba.com'></btn-primary>
+                                <a class='links not-allowed' href="#" class="links">Más informacion</a>
                             </div>
                             <p class='bold'>${this.secondaryText}</p>
                         </div>

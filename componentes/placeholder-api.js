@@ -76,7 +76,7 @@ export class PlaceHOlderApi extends LitElement {
 
     constructor() {
         super()
-        this.numAlbums = 5
+        this.numAlbums
         this.albums = []
         this.addEventListener('ApiData', event => {
             this.albums = event.detail.data

@@ -31,6 +31,7 @@ export class TextButton extends LitElement {
         btn-primary {
             display: inline-block;
         }
+        
     `;
 
     static get properties() {
@@ -44,7 +45,7 @@ export class TextButton extends LitElement {
             <div class='wrapper'>
                 <div id='text-button'>
                     <h2>${this.title}</h2>
-                    <btn-primary text='Hazte cliente' url='www.prueba.com'></btn-primary>
+                    <btn-primary class='not-allowed' text='Hazte cliente' url='www.prueba.com'></btn-primary>
                 </div>
             </div>
         `;

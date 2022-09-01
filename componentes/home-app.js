@@ -31,6 +31,7 @@ export class HomeApp extends LitElement {
     constructor() {
         super(),
         this.urlSelected = 'personas'
+        this.success = true
     }
 
     urlChanged(e) {
@@ -57,7 +58,7 @@ export class HomeApp extends LitElement {
                                     btnText='Hazte cliente'
                                 ></text-image>
 
-                                <placeholder-api></placeholder-api>
+                                <placeholder-api numAlbums='5'></placeholder-api>
 
                                 <text-button 
                                     title='Más de 1 millón de clientes disfrutan de una Cuenta Online sin comisiones ni condiciones'>
@@ -86,10 +87,30 @@ export class HomeApp extends LitElement {
                                     secondaryText='Cero comisiones durante los 12 primeros meses para autónomos y empresas. Y si tu empresa factura menos de 5 millones de €, tampoco pagarás comisiones después.'
                                     btnText='Saber más'
                                 ></text-image>
+
+                                <text-image 
+                                    subtitle='Cuenta Online Sin Comisiones'
+                                    class='small-img'
+                                    title='Y llévate hasta 350 € con el Plan Invita a un Amigo'
+                                    features='Hazte cliente con la Cuenta Online Sin Comisiones. 
+                                            - Accede al área privada de cliente en "Mis promociones" 
+                                            - Comparte tu código con amigos y familiares.'
+                                    image='section1.svg'
+                                    secondaryText='Para llevaros el premio, tus amigos tendrán que utilizar tu código al hacerse clientes y realizar una compra superior a 15 € con su nueva tarjeta BBVA.'
+                                    btnText='Hazte cliente'
+                                ></text-image>
+
+                                <text-button 
+                                    title='Más de 1 millón de clientes disfrutan de una Cuenta Online sin comisiones ni condiciones'>
+                                </text-button>
+
+                                <placeholder-api numAlbums='2'></placeholder-api>
                             `
                         }`
                     : html `<login-app @sign=${this.startApp}></login-app>`
                 }
+
+                <footer-app></footer-app>
             </div>
         `;  
     }

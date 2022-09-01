@@ -95,8 +95,13 @@ class NavBar extends LitElement {
             width: 100%;
             background-color: rgb(255, 255, 255);
         }
+
         h3 {
             color: #fff;
+        }
+
+        .not-allowed {
+            cursor: not-allowed;
         }
         
     `
@@ -134,7 +139,7 @@ class NavBar extends LitElement {
             <div class="container">
                 <div class="navbar">
                     <div class="navbar-block">
-                        <img @click=${this.activeButton} src="./images/logo-BBVA.svg" alt="logo" class='logo'>
+                        <img src="./images/logo-BBVA.svg" alt="logo" class='logo'>
                         ${this.navPages.map( item => {
                             return html`
                                 <a 
@@ -147,11 +152,11 @@ class NavBar extends LitElement {
                         })}
                     </div>
                     <div class="navbar-block">
-                        <a href="#" class='navbar-item navbar-item__newClient'>
+                        <a href="#" class='navbar-item navbar-item__newClient not-allowed'>
                             <img src="./images/newclient.svg">
                             Hazte cliente
                         </a>
-                        <a href="#" class='navbar-item btn-green'>Acceso</a>
+                        <a href="#" class='navbar-item btn-green not-allowed' >Acceso</a>
                         <div>Menu</div>
                     </div>
                 </div>
