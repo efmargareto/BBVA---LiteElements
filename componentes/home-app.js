@@ -28,7 +28,7 @@ export class HomeApp extends LitElement {
     constructor() {
         super(),
         this.urlSelected = 'personas'
-        this.success = true
+        this.success = false
     }
 
     urlChanged(e) {
