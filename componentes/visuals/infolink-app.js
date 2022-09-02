@@ -30,7 +30,43 @@ export class TextButton extends LitElement {
 
         btn-primary {
             display: inline-block;
+            margin-right: -25px;
         }
+
+        @media screen and (max-width: 1024px) {
+            #text-button {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .btn {
+                margin: 0;
+            }
+
+        }
+
+        @media screen and (max-width: 767px) {
+            h2 {
+                font-size: 24px;
+                line-height: 20px;
+                margin-top: 0;
+            }
+
+            .wrapper {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 18px;
+                line-height: 120%;
+            }
+        }
+
+    
         
     `;
 

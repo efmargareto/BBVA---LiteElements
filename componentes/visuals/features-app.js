@@ -123,6 +123,45 @@ export class TextImage extends LitElement {
         .bold {
             font-weight: 700;
         }
+
+        @media screen and (max-width: 1024px) {
+            .subtitle {
+                margin-top: 35px;
+            }
+
+            .textImage-block {
+                flex-wrap: wrap;
+            }
+
+            .textImage-info {
+                width: 100% !important;    
+                padding: 0 30px 35px;
+                order: 2;
+            }
+
+            .textImage-img {
+                position: relative;
+                width: 100vw;
+                height: 300px;
+                max-width: none;   
+                order: 1;
+                background-position-y: 0 !important;        
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .textImage-info {
+                padding: 0px 30px 5px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .subtitle {
+                margin-top: 35px;
+            }
+        }
     `;
 
     static get properties() {

@@ -14,6 +14,14 @@ export class FooterApp extends LitElement {
             padding: 35px 0;
             margin: 0 auto;
         }
+
+        @media screen and (max-width: 767px) {
+            .logo {
+                height: 25px;
+                padding: 25px 0px;
+            }
+        }
+  
     `;
 
     render() {

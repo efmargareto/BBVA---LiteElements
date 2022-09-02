@@ -1,9 +1,4 @@
 import { LitElement, html, css } from 'lit-element';
-import './utilities/getApi-app' 
-import './utilities/paintData-app'
-import './utilities/login-app'
-import './visuals/infolink-app'
-
 export class HomeApp extends LitElement {
 
     static styles = css`
@@ -17,7 +12,7 @@ export class HomeApp extends LitElement {
             margin-right: auto;
             max-width: 100%;
         }
-        
+
         h3, h1 {
             color: red;
         }

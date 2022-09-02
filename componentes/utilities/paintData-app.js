@@ -8,6 +8,10 @@ export class PlaceHOlderApi extends LitElement {
             display: block;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         .container {
             width: 1176px;
             margin-left: auto;
@@ -64,6 +68,31 @@ export class PlaceHOlderApi extends LitElement {
             text-decoration: none;
             display: block;
             font-weight: 700;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container {
+                padding: 0px 30px 25px;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            h2 {
+                font-size: 24px;
+                line-height: 20px;
+                margin-top: 30px;
+            }
+
+            .container {
+                margin-bottom: 0;
+                padding-bottom: 15px;
+            }
+
+            .album {
+                width: 100%;
+                align-items: flex-start;
+            }
         }
     `;
 

@@ -53,8 +53,14 @@ class NavBar extends LitElement {
         }
 
         a {
+            text-decoration: none;
+        }
+
+        span {
             color: #fff;
             text-decoration: none;
+            cursor: pointer;
+            opacity: .5;
         }
 
         .btn-green {
@@ -83,6 +89,7 @@ class NavBar extends LitElement {
         .active {
             font-weight: 700;
             position: relative;
+            opacity: 1;
         }
 
         .active:before {
@@ -102,6 +109,51 @@ class NavBar extends LitElement {
         .not-allowed {
             cursor: not-allowed;
         }
+
+        @media screen and (max-width: 1024px) {
+
+            .navbar-block {
+                padding-left: 35px;
+            }
+
+            .logo {
+                height: 30px;
+            }
+
+            .navbar-block:last-child {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .navbar-block {
+                padding-left: 0;
+            }
+
+            .logo {
+                height: 15px;
+            }
+
+            .navbar-item {
+                font-size: 12px;
+            }
+
+            .navbar-item.active::before {
+                bottom: -22px;
+            }
+
+            .navbar {
+                height: 60px;
+                justify-content: space-around;
+            }
+        }
+
+
+
+
+
+
     `
 
     static get properties() {
@@ -134,12 +186,12 @@ class NavBar extends LitElement {
     paintTabs() {
         return this.navPages.map( item => {
             return html`
-                <a 
+                <span 
                     href=${item.url} 
                     class='navbar-item ${item.active ? 'active' : ''}'
                     @click=${this.activeButton}
                     data-select=${item.selected}
-                > ${item.text}</a>
+                > ${item.text}</span>
             `
         })
     }

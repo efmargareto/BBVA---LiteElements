@@ -3,4 +3,8 @@ import './componentes/visuals/navbar-app'
 import './componentes/visuals/features-app' 
 import './componentes/visuals/btn-app' 
 import './componentes/visuals/footer-app' 
+import './componentes/visuals/infolink-app'
+import './componentes/utilities/getApi-app' 
+import './componentes/utilities/paintData-app'
+import './componentes/utilities/login-app'
 
