@@ -73,6 +73,8 @@ export class HomeApp extends LitElement {
                                     image='section0.png'
                                     btnText='Hazte cliente'
                                 ></text-image>
+
+                                <footer-app></footer-app>
                             `
                             :  html `
                                 <text-image 
@@ -102,12 +104,14 @@ export class HomeApp extends LitElement {
                                 </text-button>
 
                                 <placeholder-api numAlbums='2'></placeholder-api>
+
+                                <footer-app></footer-app>
                             `
                         }`
                     : html `<login-app @sign=${this.startApp}></login-app>`
                 }
 
-                <footer-app></footer-app>
+                
             </div>
         `;  
     }

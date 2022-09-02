@@ -88,6 +88,23 @@ export class LoginApp extends LitElement {
         button:hover {
             background-position: 0 center;
         }
+
+        @media screen and (max-width: 767px) {
+            h2 {
+                font-size: 13px;
+                margin-bottom: 13px;
+
+            }
+
+            .login-block {
+                width: 310px;
+                padding-top: 10px;
+            }
+
+            .logo {
+                width: 80px;
+            }
+        }
     `
     $get = elem => this.shadowRoot.querySelector(elem)
 
